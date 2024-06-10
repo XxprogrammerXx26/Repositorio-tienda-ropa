@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Producto</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Agregar Producto</h1>
+  </header>
+  <main class="container my-4">
+    <form action="/productsAdmin/new" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="precio">Precio</label>
+        <input type="number" class="form-control" id="precio" name="precio" required>
+      </div>
+        <div class="form-group">
+              <label for="categoria">Categoría:</label>
+              <select class="form-control" id="categoria" name="categoria">
+                <option value="1">Categoría 1</option>
+                <option value="2">Categoría 2</option>
+                <option value="3">Categoría 3</option>
+              </select>
+            </div>
+      <div class="form-group">
+        <label for="imagen">Imagen</label>
+        <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*" required>
+      </div>
+      <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+  </main>
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2024 Tienda de Ropa</p>
+  </footer>
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

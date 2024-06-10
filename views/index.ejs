@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Tienda de Ropa</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Inicio</a>
+          </li>
+      
+          <li class="nav-item">
+            <a class="nav-link" href="/productsAdmin">Mantenedor</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+  </header>
+  <div class=" text-center py-3">
+      <h1>Bienvenidos a nuestra tienda de ropa</h1>
+    </div>
+  <main class="container my-4">
+    <section class="banner mb-4">
+      <h2 class="text-center">Promociones</h2>
+      <!-- Banner contenido -->
+    </section>
+    <section class="categorias mb-4">
+      <h2 class="text-center">Categorías de Productos</h2>
+      <!-- Categorías contenido -->
+    </section>
+    <section class="productos-destacados">
+      <h2 class="text-center mb-4">Productos Destacados</h2>
+      <div class="row">
+        <% productos.forEach(producto => { %>
+          <div class="col-md-3 mb-4">
+            <div class="card">
+              <img src="<%= producto.imagen %>" class="card-img-top" alt="<%= producto.nombre %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= producto.nombre %></h5>
+                <p class="card-text"><%= producto.descripcion %></p>
+                <a href="/products/<%= producto.id %>" class="btn btn-primary">Ver Producto</a>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2024 Tienda de Ropa</p>
+  </footer>
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
